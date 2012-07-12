@@ -24,7 +24,7 @@ sub new {
     
     # создаем fifo очередь для модуля которая может содержать не больше queue_size
     # задач в оперативной памяти, остальное будет смещаться в хранилище  
-    $self->{queque} = Tartuga::Queue::Fabric->create(
+    $self->{queue} = Tartuga::Queue::Fabric->create(
         size => $self->{queue_size},
         type => $self->{queue_store_type},
     );
